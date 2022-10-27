@@ -6,8 +6,37 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="20">
+                    <Border BorderBrush="Black" x:Name="Border1" BorderThickness="0.5" Background="#0000FF" >
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                    <Border BorderBrush="Black" x:Name="Border2" BorderThickness="0.5" Background="#CC0000FF">
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                    <Border BorderBrush="Black" x:Name="Border3" BorderThickness="0.5" Background="#990000FF">
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                    <Border BorderBrush="Black" x:Name="Border4" BorderThickness="0.5" Background="#660000FF">
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                    <Border BorderBrush="Black" x:Name="Border5" BorderThickness="0.5" Background="#330000FF">
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="20">
+                    <TextBlock Width="80" x:Name="A_1" Text="明度 : 100"/>
+                    <TextBlock Width="80" x:Name="A_2" Text="明度 : 80"/>
+                    <TextBlock Width="80" x:Name="A_3" Text="明度 : 60"/>
+                    <TextBlock Width="80" x:Name="A_4" Text="明度 : 40"/>
+                    <TextBlock Width="80" x:Name="A_5" Text="明度 : 20"/>
+                </StackPanel>
+                </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <ColorPicker x:Name="ColorPicker" ColorChanged="ColorPicker_ColorChanged"/>
+            </StackPanel>
+        </StackPanel>
     </StackPanel>
 </Window>

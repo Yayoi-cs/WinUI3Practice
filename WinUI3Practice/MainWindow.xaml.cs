@@ -12,6 +12,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -27,10 +28,13 @@ namespace WinUI3Practice
         {
             this.InitializeComponent();
         }
-
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void ColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args)
         {
-            myButton.Content = "Clicked";
+            Border1.Background = new SolidColorBrush(ColorPicker.Color);
+            Border2.Background = new SolidColorBrush(Color.FromArgb(Convert.ToByte(ColorPicker.Color.A - 50),ColorPicker.Color.R, ColorPicker.Color.G, ColorPicker.Color.B));
+            Border3.Background = new SolidColorBrush(Color.FromArgb(Convert.ToByte(ColorPicker.Color.A - 100), ColorPicker.Color.R, ColorPicker.Color.G, ColorPicker.Color.B));
+            Border4.Background = new SolidColorBrush(Color.FromArgb(Convert.ToByte(ColorPicker.Color.A - 150), ColorPicker.Color.R, ColorPicker.Color.G, ColorPicker.Color.B));
+            Border5.Background = new SolidColorBrush(Color.FromArgb(Convert.ToByte(ColorPicker.Color.A - 200), ColorPicker.Color.R, ColorPicker.Color.G, ColorPicker.Color.B));
         }
     }
 }
