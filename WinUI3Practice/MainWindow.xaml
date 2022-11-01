@@ -33,6 +33,26 @@
                     <TextBlock Width="80" x:Name="A_4" Text="明度 : 40"/>
                     <TextBlock Width="80" x:Name="A_5" Text="明度 : 20"/>
                 </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="彩度のグラデーション" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="20">
+                    <Border BorderBrush="Black" x:Name="Border11" BorderThickness="0.5" Background="#1414F0" >
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                    <Border BorderBrush="Black" x:Name="Border12" BorderThickness="0.5" Background="#2828F0">
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                    <Border BorderBrush="Black" x:Name="Border13" BorderThickness="0.5" Background="#3C3CF0">
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                    <Border BorderBrush="Black" x:Name="Border14" BorderThickness="0.5" Background="#5050F0">
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                    <Border BorderBrush="Black" x:Name="Border15" BorderThickness="0.5" Background="#6464F0">
+                        <StackPanel Width="80" Height="80" />
+                    </Border>
+                </StackPanel>
                 </StackPanel>
             <StackPanel Orientation="Vertical">
                 <ColorPicker x:Name="ColorPicker" ColorChanged="ColorPicker_ColorChanged"/>
